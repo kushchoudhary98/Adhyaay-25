@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 
 import Spline from "@splinetool/react-spline";
@@ -37,3 +38,5 @@ export default function Merch() {
     </div>
   );
 }
+=======
+>>>>>>> ec10bbdf253220def8b2d36a481233c0e74e23b6
