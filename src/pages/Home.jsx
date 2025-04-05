@@ -14,8 +14,8 @@ const Home = () => {
       <Background />
       <div className="relative w-full h-[100vh] overflow-hidden">
         <div>
-          <img src={adhyaayLogo} alt="adhyaay" className="" />
         </div>
+        <img src={adhyaayLogo} alt="adhyaay" className="absolute top-1/2 left-1/2" />
 
         <div className="absolute top-[-15%] left-1/2 -translate-x-1/2 w-[120vw] h-[120vw] -z-40 rounded-full border-zinc-700 border-dashed border-2">
           <motion.div
