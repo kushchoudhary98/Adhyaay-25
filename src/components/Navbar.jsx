@@ -1,9 +1,13 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 w-[100dvw] z-50 flex items-center justify-between mt-5">
+         <div className="absolute top-5 left-5">
+          <img src={logo} alt="adhyaay" className="w-[150px]" />
+        </div>
         <SlideTabs />
     </div>
   );

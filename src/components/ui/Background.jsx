@@ -4,8 +4,8 @@ import { StarsBackground } from './stars-background'
 
 export default function Background() {
   return (
-    <div className="fixed -z-50 inset-0 bg-black">
-        {/* <ShootingStars /> */}
+    <div className="fixed -z-40 inset-0 bg-black">
+        <ShootingStars />
         <StarsBackground />
     </div>
   )
