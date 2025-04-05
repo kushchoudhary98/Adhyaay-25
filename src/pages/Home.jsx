@@ -1,81 +1,77 @@
-import React, { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import copaProfile from '../assets/profile_dominic.jpg'
-import copiProfile from '../assets/profile_tom.jpg'
+import React, { useState } from "react";
 import { ShootingStars } from './../components/ui/shooting-stars';
 import { StarsBackground } from './../components/ui/stars-background';
+import { Menu, X } from "lucide-react";
+import LOGO from "../assets/logo.png";
+import Adhyaay from "../assets/adhyaay-name.png";
+import SpaceVideo from "../assets/space-video.mp4";
+import BgImage from "../assets/space-bg.png";
 
-export default function Home() {
-  const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end end"]
-  });
-
-  const profileHeight = useTransform(scrollYProgress, [0, 1], ["600px", "0px"]);
-  const profileTextHeight = useTransform(scrollYProgress, [0.2, 0.8], ["90px", "0px"]);
+const Home = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className='w-full h-[400vh]'>
-      <div className='w-full h-[100vh]'>
-      <div className="h-full bg-neutral-900 flex flex-col items-center justify-center relative w-full overflow-hidden">
-      <h2 className="relative z-10 text-3xl md:text-5xl font-medium text-center tracking-tight flex items-center gap-2 md:gap-8">
-  <span className="bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent">
-    Shooting Star
-  </span>
-  <span className="text-white text-lg font-thin">x</span>
-  <span className="bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent">
-    Star Background
-  </span>
-</h2>
+    <div
+      className="w-full h-full bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center"
+      style={{ backgroundImage: `url(${BgImage})` }}
+    >
+      
+      <div className="px-4 w-full top-7 flex flex-row justify-between items-center">
+       
+        <img src={LOGO} alt="Logo" className="w-16 rounded-full" />
 
-  <div className="absolute inset-0">
-    <ShootingStars />
-    <StarsBackground />
-  </div>
-</div>
+    
+        <nav className="hidden md:flex md:w-[60%] justify-center space-x-8 text-white text-[14px] md:text-lg font-bold">
+          <a href="/home" className="underline underline-offset-4">HOME</a>
+          <a href="/events" className="hover:underline hover:underline-offset-4">EVENTS</a>
+          <a href="/team" className="hover:underline hover:underline-offset-4">OUR TEAM</a>
+          <a href="/sponsor" className="hover:underline hover:underline-offset-4">SPONSORS</a>
+          <a href="/contact-us" className="hover:underline hover:underline-offset-4">CONTACT US</a>
+        </nav>
 
-      </div>
-      <div className='w-full h-[300vh] bg-black text-white'>
-        <div className='w-full h-screen flex justify-center items-center'>
-          <p className='text-[150px] w-[70%] leading-[1] font-medium'>PASSION FOR EXCELLENCE + IMMERSIVE TECH IS AT OUR CORE</p>
-        </div>
-        <div ref={ref} className='w-full h-[200vh] relative'>
-          <div className='sticky top-0 left-0 w-full h-screen flex justify-center items-center overflow-hidden'>
-            <div id='profile-photo' className='w-[500px] h-[600px] relative'>
-              <motion.div style={{ height: profileHeight }} className='w-[500px] h-[600px] overflow-hidden'>
-                <img className='w-[500px] h-[600px] object-cover' src={copaProfile} />
-              </motion.div>
-              <img className='w-[500px] h-[600px] object-cover absolute top-0 left-0 -z-10' src={copiProfile} />
-            </div>
-            <motion.h3
-              initial={{ left: "0%" }}
-              animate={{ left: "-150%" }}
-              transition={{
-                duration: 40,
-                repeat: Infinity,
-                ease: "linear"
-              }}
-              className='absolute leading-[0.7] -z-30 text-[120px] h-[90px] font-semibold left-0 top-1/2 -translate-y-1/2 text-nowrap capitalize'>
-              AKANKSHA VERMA AKANKSHA VERMA AKANKSHA VERMA AKANKSHA VERMA AKANKSHA VERMA
-            </motion.h3>
-            <motion.div style={{ height: profileTextHeight }} className='absolute w-full h-[200px] -z-20 left-0 top-1/2 -translate-y-1/2 bg-black overflow-hidden flex items-center'>
-              <motion.h3
-                initial={{ left: "0%" }}
-                animate={{ left: "-150%" }}
-                transition={{
-                  duration: 40,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-                className='relative leading-[0.67] top-0 left-0 text-[120px] font-semibold text-nowrap capitalize'>
-                JAYANT CHAWLA JAYANT CHAWLA JAYANT CHAWLA JAYANT CHAWLA JAYANT CHAWLA
-              </motion.h3>
-            </motion.div>
-          </div>
+        <div className="md:hidden">
+          {menuOpen ? (
+            <X className="text-white w-8 h-8 cursor-pointer" onClick={() => setMenuOpen(false)} />
+          ) : (
+            <Menu className="text-white w-8 h-8 cursor-pointer" onClick={() =>{setMenuOpen(true)}} />
+          )}
         </div>
       </div>
+
+      {menuOpen && (
+        <div className="md:hidden z-50 hover:cursor-pointer absolute top-16 right-5 bg-black bg-opacity-80 p-5 rounded-lg shadow-lg">
+          <nav className="flex flex-col space-y-4 hover:cursor-pointer text-white text-lg font-bold">
+            <a href="/home" className="hover:underline hover:underline-offset-4" onClick={() => setMenuOpen(false)}>HOME</a>
+            <a href="/events" className="hover:underline hover:underline-offset-4" onClick={() => setMenuOpen(false)}>EVENTS</a>
+            <a href="/team" className="hover:underline hover:underline-offset-4" onClick={() => setMenuOpen(false)}>OUR TEAM</a>
+            <a href="/sponsor" className="hover:underline hover:underline-offset-4" onClick={() => setMenuOpen(false)}>SPONSORS</a>
+            <a href="/contact-us" className="hover:underline hover:underline-offset-4" onClick={() => setMenuOpen(false)}>CONTACT US</a>
+          </nav>
+        </div>
+      )}
+
+   
+      <img
+        src={Adhyaay}
+        alt="Adhyaay"
+        className="w-3/4 md:w-1/2 mx-auto mix-blend-multiply brightness-100 contrast-200"
+      />
+
+     
+      <div className="relative w-full flex justify-center items-center mt-4">
+        <video
+          src={SpaceVideo}
+          autoPlay
+          loop
+          muted
+          className="w-full brightness-100 mix-blend-multiply contrast-200"
+        />
+      </div>
+      {/* <ShootingStars />
+      <StarsBackground /> */}
     </div>
-  )
-}
+    
+  );
+};
+
+export default Home;
