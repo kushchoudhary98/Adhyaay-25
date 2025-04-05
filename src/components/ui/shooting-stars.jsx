@@ -46,7 +46,12 @@ export const ShootingStars = ({
         distance: 0,
         scale: 1,
       };
-      setStars((prevStars) => [...prevStars, newStar]);
+      if(stars.length > 20) {
+        setStars([]);
+      }
+      else {
+        setStars((prevStars) => [...prevStars, newStar]);
+      }
       
       const randomDelay = Math.random() * (maxDelay - minDelay) + minDelay;
       setTimeout(createStar, randomDelay);
