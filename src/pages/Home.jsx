@@ -5,6 +5,7 @@ import p2 from '../assets/planets/planet2.png';
 import p3 from '../assets/planets/planet3.png';
 import Background from "../components/ui/Background";
 import adhyaayLogo from "../assets/adhyaay.png";
+import Navbar from "../components/Navbar";
 
 const Home = () => {
   const duration = 10;
@@ -12,10 +13,15 @@ const Home = () => {
   return (
     <>
       <Background />
+      <Navbar />
       <div className="relative w-full h-[100vh] overflow-hidden">
-        <div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <img src={adhyaayLogo} alt="adhyaay" className="w-[700px]" />
         </div>
-        <img src={adhyaayLogo} alt="adhyaay" className="absolute top-1/2 left-1/2" />
+
+        <div>
+          
+        </div>
 
         <div className="absolute top-[-15%] left-1/2 -translate-x-1/2 w-[120vw] h-[120vw] -z-40 rounded-full border-zinc-700 border-dashed border-2">
           <motion.div
