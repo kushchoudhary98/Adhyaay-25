@@ -9,25 +9,21 @@ export default function Merch() {
 
   return (
     <>
-      <div className="relative w-[80vw] h-[90vh] overflow-hidden flex flex-row bg-[#ffffff06] backdrop-blur-3xl rounded-4xl z-30">
-        <div className="text-white w-full mt-5 flex items-center justify-center p-20">
-          <div className="text-3xl font-bold w-fit flex justify-center flex-col  p-20 rounded-4xl">
-            Get <span className="text-6xl font-extrabold">THE OFFICIAL TSHIRT MERCHANDISE</span> of
-            <img src={logo} className="w-[500px]"/>
-            <div className="text-3xl font-bold">
-              at just <span className="text-7xl font-extrabold">₹499</span>
-            </div>
+      <div className="relative md:w-[80vw] w-[90vw] md:h-[90vh] h-[80vh] translate-y-[5vh] overflow-hidden flex flex-col md:flex-row bg-[#ffffff06] backdrop-blur-3xl rounded-4xl z-30">
+        <div className="text-white w-full md:mt-5 flex items-center justify-center md:p-20 p-5">
+          <div className="text-3xl font-bold w-fit flex justify-center flex-col p-5 md:p-20 rounded-4xl">
+            <div>Get The Official Shirt of Adhyaay'25</div>
           </div>
         </div>
 
         {/* Spline Model Section */}
-        <div className="z-10 w-full ">
+        <div className="z-10 w-full h-[60vh]">
           {loading && (
             <div className="absolute flex items-center justify-center w-full h-full bg-gray-800/80">
               <Loader2 className="animate-spin text-white w-10 h-10" />
             </div>
           )}
-          <div className="w-full h-screen flex items-center justify-center">
+          <div className="w-full h-full scale-80 flex items-center justify-center">
             <Spline
               scene="https://prod.spline.design/eioFOwKyu0T7k23M/scene.splinecode"
               className={`w-full h-full ${loading ? "hidden" : "block"}`}

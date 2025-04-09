@@ -6,13 +6,11 @@ import p3 from '../assets/planets/planet3.png';
 import Background from "../components/ui/Background";
 import adhyaayLogo from "../assets/adhyaay.png";
 import logo from "../assets/logo.png";
-//import Navbar from "../components/Navbar";
-import spaceBg from "../assets/space-bg.png";
-import m1 from "../assets/meteor1.png";
-import m2 from "../assets/meteor2.png";
-import m3 from "../assets/meteor3.png";
 import Merch from "./Merch";
 import Events from "./Events";
+import Team from "./Team";
+import About from "./About";
+import NavItems from "../components/NavItems";
 
 const positions = {
   'home': { x: "-30vw", y: "-10vw" },
@@ -29,21 +27,26 @@ const Home = () => {
 
   const [section, setSection] = useState("home");
   const [showNav, setShowNav] = useState(true);
+  const [showMobNav, setShowMobNav] = useState(false);
 
-  const [cameraPosition, setCameraPosition] = useState({
-    x: "-30vw",
-    y: "0vw",
-  });
+  const [cameraPosition, setCameraPosition] = useState(window.innerWidth<765?{ x: "-84vh", y: "10vh" }:{ x: "-30vw", y: "0vw" });
 
   const Navbar = () => {
     return (
-      <div className="fixed top-0 left-0 w-[100dvw] z-50 flex items-center justify-center mt-5">
+      <div className="fixed top-0 left-0 w-[100dvw] z-50 flex justify-center mt-5">
+        {/* <motion.div
+          
+          animate={{ height: showMobNav ? "100vh" : "0vh", opacity: showMobNav ? 1 : 0 }}
+          transition={{ duration: 0.5, ease: "linear" }}
+          className="fixed top-0 left-0 bg-black w-full h-screen border-2 border-white"></motion.div> */}
+        <NavItems showMobNav={showMobNav} setShowMobNav={setShowMobNav} setSection={setSection} setCameraPosition={setCameraPosition} />
         <div className="absolute hidden md:block top-5 left-5">
-          <img src={logo} alt="adhyaay" className="w-[150px]" />
+          <img src={logo} alt="adhyaay" className="w-[150px] h-[150px]" />
         </div>
-        <div className="md:hidden bg-[#ffffff15] backdrop-blur-3xl rounded-full p-3">
-          <img src={logo} alt="adhyaay" className="w-[80px]" />
+        <div onClick={() => setShowMobNav(!showMobNav)} className="md:hidden bg-[#ffffff15] backdrop-blur-3xl rounded-full p-2">
+          <img src={logo} alt="adhyaay" className="w-[80px] h-[80px]" />
         </div>
+        
         <SlideTabs />
       </div>
     );
@@ -64,7 +67,7 @@ const Home = () => {
             opacity: 0,
           }));
         }}
-        className="hidden mx-auto md:flex w-fit rounded-full border-2 border-black bg-[#ffffff16] p-5 backdrop-blur-3xl"
+        className="hidden mx-auto md:flex w-fit rounded-full border-2 border-black bg-[#ffffff16] p-3 backdrop-blur-3xl"
       >
         <Tab setPosition={setPosition} href="home">Home</Tab>
         <Tab setPosition={setPosition} href="events">Events</Tab>
@@ -155,37 +158,16 @@ const Home = () => {
                 delay: 0,
               }}
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-              <img src={adhyaayLogo} alt="adhyaay" className="w-[900px]" />
+              <img src={adhyaayLogo} alt="adhyaay" className="md:w-[900px] w-[300px] scale-150 md:scale-100" />
             </motion.div>
           )}
         </AnimatePresence>
 
        <AnimatePresence>
           {section === "about" && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0, transition: { delay: 0 } }}
-              transition={{
-                duration: 0.25,
-                ease: "linear",
-                delay: 0,
-              }}
-              className='w-full h-[100dvh] p-20 text-white flex flex-col items-center justify-center z-30'>
-              <div className="w-[80vw] h-[90vh] p-20 flex flex-col items-center justify-center bg-[#ffffff06] backdrop-blur-3xl rounded-4xl z-30">
-                <div className='text-7xl font-extrabold flex items-end justify-center'>
-                  ABOUT
-                  <hr className='w-[50vw]' />
-                </div>
-                <div className='mt-10 text-2xl'>
-                  Adhyaay serves as vital platform for celebrating diversity, fostering, understanding, and preserving heritage. They bring communities together, bridging differences and promoting unity through shared experiences. These events showcase various forms of art, music, dance, cuisine, and traditions, providing opportunities for individuals to express their cultural identities and for audiences to appreciate and learn from them.
-                  <br />
-                  The purpose of Adhyaay extends beyond mere entertainment; they serve as catalysts for social cohesion, dialogue, and mutual respect. By highlighting the richness of different cultures, they promote tolerance and appreciation for cultural diversity, combating prejudice and fostering a sense of belonging among participants and attendees alike.
-                  <br />
-                  Furthermore, Adhyaay contribute to the local economy by attracting people, supporting local artisans and businesses. They also play a crucial role in cultural preservation, passing down traditions, stories, and customs from one generation to the next, ensuring their continuity and relevance in an ever- changing session.
-                </div>
-              </div>
-            </motion.div>
+            <div>
+              <About />
+            </div>
           )}
        </AnimatePresence>
 
@@ -199,7 +181,9 @@ const Home = () => {
 
         <AnimatePresence>
           {section === "teams" && (
-            <div>About</div>
+            <div>
+              <Team />
+            </div>
           )}
         </AnimatePresence>
 
@@ -222,7 +206,7 @@ const Home = () => {
           }}
           className="absolute top-0 left-0"
         >
-          <div className="absolute top-0 left-0 w-[160vh] h-[160vh] md:w-[160vw] md:h-[160vw] -z-40 rounded-full border-zinc-700 border-dashed border-2">
+          <div className="absolute top-0 left-0 w-[210vh] h-[210vh] md:w-[160vw] md:h-[160vw] -z-40 rounded-full border-zinc-700 border-dashed border-2">
             <motion.div
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
@@ -231,7 +215,7 @@ const Home = () => {
               <img src={p2} alt="p2" className="fixed top-[-90px] left-1/2 -translate-x-1/2" />
             </motion.div>
           </div>
-          <div className="absolute top-[15vw] left-[15vw] md:w-[130vw] md:h-[130vw] -z-40 rounded-full border-zinc-700 border-dashed border-2">
+          <div className="absolute md:top-[15vw] md:left-[15vw] left-[25vh] top-[25vh] md:w-[130vw] md:h-[130vw] w-[160vh] h-[160vh] -z-40 rounded-full border-zinc-700 border-dashed border-2">
             <motion.div
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
@@ -240,7 +224,7 @@ const Home = () => {
               <img src={p2} alt="p2" className="fixed top-[-90px] left-1/2 -translate-x-1/2" />
             </motion.div>
           </div>
-          <div className="absolute top-[30vw] left-[30vw] w-[100vw] h-[100vw] -z-40 rounded-full border-zinc-700 border-dashed border-2">
+          <div className="absolute md:top-[30vw] md:left-[30vw] top-[50vh] left-[50vh] md:w-[100vw] md:h-[100vw] w-[110vh] h-[110vh] -z-40 rounded-full border-zinc-700 border-dashed border-2">
             <motion.div
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
@@ -249,7 +233,7 @@ const Home = () => {
               <img src={p1} alt="p1" className="fixed top-[-90px] left-1/2 -translate-x-1/2" />
             </motion.div>
           </div>
-          <div className="absolute top-[45vw] left-[45vw] w-[70vw] h-[70vw] -z-40 rounded-full border-zinc-700 border-dashed border-2">
+          <div className="absolute md:top-[45vw] md:left-[45vw] top-[75vh] left-[75vh] md:w-[70vw] md:h-[70vw] w-[60vh] h-[60vh] -z-40 rounded-full border-zinc-700 border-dashed border-2">
             <motion.div
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}

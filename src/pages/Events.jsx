@@ -186,7 +186,7 @@ const Events = () => {
           <motion.div
             initial="hidden"
             animate="visible"
-            exit="hidden"
+            exit="exit"
             variants={{
               hidden: { opacity: 0 },
               visible: {
@@ -195,36 +195,34 @@ const Events = () => {
                   staggerChildren: 0.1,
                 },
               },
+              exit: { opacity: 0 },
             }}
-            className="flex flex-col items-start justify-center"
-          >
-            {eventsData.map((data, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                  exit: { opacity: 0, y: -20 },
-                }}
-                transition={{
-                  duration: 0.5,
-                  ease: "linear",
-                }}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                className={`text-2xl p-1 font-medium cursor-pointer transition-all ${hoveredIndex === null || hoveredIndex === index
-                  ? "text-white"
-                  : "text-gray-500"
-                  }`}
-              >
+            className='bg-[#ffffff06] px-8 py-6 backdrop-blur-3xl rounded-4xl'>
+            {eventsData.map((data, index) => {
+              return (
                 <motion.div
-                  whileHover={{ scale: 1.15, transition: { duration: 0.15, ease: "linear" } }}
+                  key={index}
+                  whileHover={{ scale: 1.05, transition: { duration: 0.15 } }}
                   whileTap={{ scale: 1 }}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.8 },
+                    visible: { opacity: 1, scale: 1 },
+                    exit: { opacity: 0, y: 0.8 },
+                  }}
+                  transition={{
+                    ease: "easeInOut",
+                  }}
+                  className={`text-2xl p-1 font-medium cursor-pointer ${hoveredIndex === null || hoveredIndex === index
+                    ? "text-white"
+                    : "text-gray-500"
+                    }`}
                 >
                   {data.title}
                 </motion.div>
-              </motion.div>
-            ))}
+              )
+            })}
           </motion.div>
         </div>
         <DragCloseDrawer open={open} setOpen={setOpen}>
