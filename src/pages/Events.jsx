@@ -167,6 +167,8 @@ const eventsData = [
 
 const Events = () => {
   const [open, setOpen] = useState(false);
+  const [eventTitle, setEventTitle] = useState("Title")
+  const [eventDesc, setEventDesc] = useState("lorem ipsum dolor sit amet.")
 
   const changeImage = () => {
 
@@ -176,7 +178,7 @@ const Events = () => {
 
   return (
     <>
-      <div className="relative z-30 w-full h-screen flex items-center justify-center">
+      <div className="hidden relative z-30 w-full h-screen md:flex items-center justify-center">
         <div>
           <div
             onClick={() => setOpen(true)}
@@ -228,13 +230,39 @@ const Events = () => {
         <DragCloseDrawer open={open} setOpen={setOpen}>
           <div className="mx-auto max-w-2xl space-y-4 text-neutral-400">
             <h2 className="text-4xl font-bold text-neutral-200">
-              Drag the handle at the top of this modal downwards 100px to close it
+              {eventTitle}
             </h2>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
-              laboriosam quos deleniti veniam est culpa quis nihil enim suscipit
-              nulla aliquid iure optio quaerat deserunt, molestias quasi facere
-              aut quidem reprehenderit maiores.
+              {eventDesc}
+            </p>
+          </div>
+        </DragCloseDrawer>
+      </div>
+      <div className="w-full h-[100dvh] relative md:hidden flex justify-center items-center">
+        <div className="w-[90vw] h-[80vh] text-white bg-[#ffffff06] translate-y-[5vh] backdrop-blur-3xl rounded-4xl z-30 relative overflow-scroll py-0">
+          {eventsData.map((data, index) => {
+            return (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }} 
+                key={index}
+                className="p-5">
+                <h2 className="text-2xl py-3">{data.title}</h2>
+                <div onClick={() => {setEventTitle(data.title); setEventDesc(data.description); setOpen(true)}} className="w-full h-[40vh] bg-amber-300 rounded-2xl">
+
+                </div>
+              </motion.div>
+            )
+          })}
+        </div>
+        <DragCloseDrawer open={open} setOpen={setOpen}>
+          <div className="mx-auto max-w-2xl space-y-4 text-neutral-400">
+            <h2 className="text-4xl font-bold text-neutral-200">
+              {eventTitle}
+            </h2>
+            <p>
+              {eventDesc}
             </p>
           </div>
         </DragCloseDrawer>
