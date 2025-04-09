@@ -176,7 +176,7 @@ export default function Team() {
         </div>
       </div>
       <div className='w-full h-[100dvh] flex justify-center items-center relative md:hidden'>
-        <div className='w-[90vw] h-[80vh] text-white bg-[#ffffff06] translate-y-[5vh] backdrop-blur-3xl rounded-4xl z-30 relative overflow-scroll py-0'>
+        <div className='w-[90vw] h-[80vh] text-white bg-[#ffffff06] translate-y-[5vh] backdrop-blur-3xl rounded-4xl z-30 relative overflow-y-scroll overflow-x-hidden py-0'>
           {domains.map((data, index) => {
             return (
               <div key={index} className='w-full flex flex-col justify-center items-center'>

@@ -212,7 +212,7 @@ const Home = () => {
               animate={{ rotate: 360 }}
               transition={{ duration: 45, ease: "linear", repeat: Infinity, delay: 0 }}
               className="w-full h-full -z-40">
-              <img src={p2} alt="p2" className="fixed top-[-90px] left-1/2 -translate-x-1/2" />
+              <img src={p2} alt="p2" className="fixed w-[250px] md:w-[360px] top-[-90px] left-1/2 -translate-x-1/2" />
             </motion.div>
           </div>
           <div className="absolute md:top-[15vw] md:left-[15vw] left-[25vh] top-[25vh] md:w-[130vw] md:h-[130vw] w-[160vh] h-[160vh] -z-40 rounded-full border-zinc-700 border-dashed border-2">
@@ -221,7 +221,7 @@ const Home = () => {
               animate={{ rotate: 360 }}
               transition={{ duration: 30, ease: "linear", repeat: Infinity, delay: 0 }}
               className="w-full h-full -z-40">
-              <img src={p2} alt="p2" className="fixed top-[-90px] left-1/2 -translate-x-1/2" />
+              <img src={p2} alt="p2" className="fixed w-[250px] md:w-[200px] top-[-90px] left-1/2 -translate-x-1/2" />
             </motion.div>
           </div>
           <div className="absolute md:top-[30vw] md:left-[30vw] top-[50vh] left-[50vh] md:w-[100vw] md:h-[100vw] w-[110vh] h-[110vh] -z-40 rounded-full border-zinc-700 border-dashed border-2">
@@ -230,7 +230,7 @@ const Home = () => {
               animate={{ rotate: 360 }}
               transition={{ duration: 20, ease: "linear", repeat: Infinity, delay: 0 }}
               className="w-full h-full">
-              <img src={p1} alt="p1" className="fixed top-[-90px] left-1/2 -translate-x-1/2" />
+              <img src={p1} alt="p1" className="fixed w-[250px] md:w-[300px] top-[-90px] left-1/2 -translate-x-1/2" />
             </motion.div>
           </div>
           <div className="absolute md:top-[45vw] md:left-[45vw] top-[75vh] left-[75vh] md:w-[70vw] md:h-[70vw] w-[60vh] h-[60vh] -z-40 rounded-full border-zinc-700 border-dashed border-2">
@@ -239,7 +239,7 @@ const Home = () => {
               animate={{ rotate: 360 }}
               transition={{ duration: 10, ease: "linear", repeat: Infinity, delay: 0 }}
               className="w-full h-full -z-40">
-              <img src={p3} alt="p3" className="fixed top-[-90px] left-1/2 -translate-x-1/2 -z-40" />
+              <img src={p3} alt="p3" className="fixed w-[250px] md:w-[200px] top-[-90px] left-1/2 -translate-x-1/2 -z-40" />
             </motion.div>
           </div>
         </motion.div>
