@@ -1,5 +1,5 @@
 import React from 'react'
-import { ShootingStars } from './shooting-stars'
+//import { ShootingStars } from './shooting-stars'
 import { StarsBackground } from './stars-background'
 import bg2 from '../../assets/bg 2.jpg'
 

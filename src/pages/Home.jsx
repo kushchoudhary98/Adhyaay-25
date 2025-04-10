@@ -5,7 +5,6 @@ import p2 from '../assets/planets/planet2.png';
 import p3 from '../assets/planets/planet3.png';
 import p4 from '../assets/planets/planet4.png';
 import Background from "../components/ui/Background";
-import adhyaayLogo from "../assets/adhyaay.png";
 import adLogo from "../assets/adh logo.png";
 import logo from "../assets/logo.png";
 import Merch from "./Merch";

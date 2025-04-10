@@ -48,8 +48,8 @@ const content = [
 
 const creativity = [
   { name: "Subhasini sahu", photo: ss },
-  { name: "Anshika Gautam", photo: ans_g },
   { name: "Peeyush Kumar Sharma", photo: pks },
+  { name: "Anshika Gautam", photo: ans_g },
 ];
 
 const events = [
