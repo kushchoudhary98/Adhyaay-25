@@ -146,7 +146,7 @@ const Home = () => {
     <>
       <Background />
       <Navbar />
-      <div className="absolute top-0 left-0 w-[100vw] h-[100vh] overflow-hidden">
+      <div className="absolute top-0 left-0 w-[100vw] h-[100dvh] overflow-hidden">
         <AnimatePresence>
           {section === "home" && (
             <motion.div
