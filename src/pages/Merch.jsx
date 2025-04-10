@@ -15,13 +15,13 @@ export default function Merch() {
         </div>
 
         {/* Spline Model Section */}
-        <div className="z-10 w-full h-[60vh] md:h-[80vh] flex justify-center items-center">
+        <div className="absolute bottom-0 z-10 w-full h-[100vh] translate-y-[20%] md:h-[80vh] flex justify-center items-center">
           {loading && (
             <div className="absolute flex items-center justify-center w-full h-full bg-gray-800/80">
               <Loader2 className="animate-spin text-white w-10 h-10" />
             </div>
           )}
-          <div className="w-full h-full scale-80 flex items-center justify-center">
+          <div className="w-full h-full scale-[0.65] flex items-center justify-center">
             <Spline
               scene="https://prod.spline.design/eioFOwKyu0T7k23M/scene.splinecode"
               className={`w-full h-full ${loading ? "hidden" : "block"}`}
