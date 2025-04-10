@@ -158,7 +158,7 @@ const Home = () => {
                 ease: "linear",
                 delay: 0,
               }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full h-screen">
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full h-[100dvh]">
               <img src={adLogo} alt="adhyaay" className="md:w-[900px] w-full md:scale-100 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
               <div className="text-zinc-400 fixed bottom-10 left-1/2 -translate-x-1/2 font-semibold">Tap Menu to Explore</div>
             </motion.div>
