@@ -3,6 +3,7 @@ import { motion, cubicBezier, AnimatePresence } from "framer-motion";
 import p1 from '../assets/planets/planet1.png';
 import p2 from '../assets/planets/planet2.png';
 import p3 from '../assets/planets/planet3.png';
+import p4 from '../assets/planets/planet4.png';
 import Background from "../components/ui/Background";
 import adhyaayLogo from "../assets/adhyaay.png";
 import logo from "../assets/logo.png";
@@ -212,7 +213,7 @@ const Home = () => {
               animate={{ rotate: 360 }}
               transition={{ duration: 45, ease: "linear", repeat: Infinity, delay: 0 }}
               className="w-full h-full -z-40">
-              <img src={p2} alt="p2" className="fixed w-[250px] md:w-[360px] top-[-90px] left-1/2 -translate-x-1/2" />
+              <img src={p4} alt="p2" className="fixed w-[250px] md:w-[360px] top-[-90px] left-1/2 -translate-x-1/2" />
             </motion.div>
           </div>
           <div className="absolute md:top-[15vw] md:left-[15vw] left-[25vh] top-[25vh] md:w-[130vw] md:h-[130vw] w-[160vh] h-[160vh] -z-40 rounded-full border-zinc-700 border-dashed border-2">

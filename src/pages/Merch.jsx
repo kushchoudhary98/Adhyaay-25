@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Spline from "@splinetool/react-spline";
 import { Loader2 } from "lucide-react";
-import Background from "../components/ui/Background";
-import logo from "../assets/adhyaay.png";
 
 export default function Merch() {
   const [loading, setLoading] = useState(true);
@@ -12,12 +10,12 @@ export default function Merch() {
       <div className="relative md:w-[80vw] w-[90vw] md:h-[90vh] h-[80vh] translate-y-[5vh] overflow-hidden flex flex-col md:flex-row bg-[#ffffff06] backdrop-blur-3xl rounded-4xl z-30">
         <div className="text-white w-full md:mt-5 flex items-center justify-center md:p-20 p-5">
           <div className="text-3xl font-bold w-fit flex justify-center flex-col p-5 md:p-20 rounded-4xl">
-            <div>Get The Official Shirt of Adhyaay'25</div>
+            <div className="text-3xl">Get The<br /> <span className="text-9xl font-extrabold font-marker">Official TShirt</span><br/> of Adhyaay'25</div>
           </div>
         </div>
 
         {/* Spline Model Section */}
-        <div className="z-10 w-full h-[60vh]">
+        <div className="z-10 w-full h-[80vh] flex justify-center items-center">
           {loading && (
             <div className="absolute flex items-center justify-center w-full h-full bg-gray-800/80">
               <Loader2 className="animate-spin text-white w-10 h-10" />

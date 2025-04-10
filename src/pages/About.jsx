@@ -12,7 +12,7 @@ export default function About() {
         ease: "linear",
         delay: 0,
       }}
-      className='w-full h-[100dvh] p-20 text-white flex flex-col items-center justify-center z-30'>
+      className='w-full h-[100vh] p-20 text-white flex flex-col items-center justify-center z-30'>
       <div className="md:w-[80vw] md:h-[90vh] w-[90vw] h-[80vh] translate-y-[5vh] p-5 md:p-20 flex flex-col items-center md:justify-center bg-[#ffffff06] backdrop-blur-3xl rounded-4xl z-30">
         <div className='md:text-7xl text-4xl pt-2 md:pt-0 font-extrabold flex items-end justify-center'>
           ABOUT
@@ -25,6 +25,16 @@ export default function About() {
           <br />
           Furthermore, Adhyaay contribute to the local economy by attracting people, supporting local artisans and businesses. They also play a crucial role in cultural preservation, passing down traditions, stories, and customs from one generation to the next, ensuring their continuity and relevance in an ever- changing session.
         </div>
+        <div className='w-[80%] flex flex-row flex-wrap gap-7 items-center justify-center mt-8'>
+          <a
+            href='https://www.instagram.com/adhyaay__25?igsh=MTZjNGt6azJ0cmxmbw=='
+            target='_blank'
+            className='text-md text-[#a0a19f9f] font-bold mt-2 hover:text-[#fff] transition-colors duration-300'
+          >
+            Follow us on Instagram
+          </a>
+        </div>
+
       </div>
     </motion.div>
   )
