@@ -6,6 +6,7 @@ import p3 from '../assets/planets/planet3.png';
 import p4 from '../assets/planets/planet4.png';
 import Background from "../components/ui/Background";
 import adhyaayLogo from "../assets/adhyaay.png";
+import adLogo from "../assets/adh logo.png";
 import logo from "../assets/logo.png";
 import Merch from "./Merch";
 import Events from "./Events";
@@ -158,8 +159,9 @@ const Home = () => {
                 ease: "linear",
                 delay: 0,
               }}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-              <img src={adhyaayLogo} alt="adhyaay" className="md:w-[900px] w-[300px] scale-150 md:scale-100" />
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full h-screen">
+              <img src={adLogo} alt="adhyaay" className="md:w-[900px] w-full md:scale-100 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+              <div className="text-zinc-400 fixed bottom-10 left-1/2 -translate-x-1/2 font-semibold">Tap Menu to Explore</div>
             </motion.div>
           )}
         </AnimatePresence>

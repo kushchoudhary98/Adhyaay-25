@@ -57,7 +57,6 @@ const events = [
   { name: "Vaibhav Yadav", photo: vy },
 ];
 
-
 const informals = [
   { name: "Harsh Sharma", photo: hs },
   { name: "Saurabh kumar", photo: sk },
@@ -104,8 +103,8 @@ const studentSecretary = [
 ];
 
 const webDevelopment = [
-  { name: "Kush Choudhary", photo: kc },
   { name: "AbhishekGupta", photo: ag },
+  { name: "Kush Choudhary", photo: kc },
 ];
 
 const designSocialHead = [
