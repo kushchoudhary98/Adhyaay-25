@@ -9,7 +9,7 @@ export default function Background() {
         <div>
           <img src={bg2} className='opacity-35'></img>
         </div>
-        <ShootingStars />
+        {/* <ShootingStars /> */}
         <StarsBackground />
 
     </div>
