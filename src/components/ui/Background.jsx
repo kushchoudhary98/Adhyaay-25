@@ -5,9 +5,9 @@ import bg2 from '../../assets/bg 2.jpg'
 
 export default function Background() {
   return (
-    <div className="fixed -z-40 inset-0 bg-black">
+    <div className="fixed -z-40 inset-0 bg-black w-full h-screen">
         <div>
-          <img src={bg2} className='opacity-35'></img>
+          <img src={bg2} className='opacity-35 w-full h-screen object-cover'></img>
         </div>
         {/* <ShootingStars /> */}
         <StarsBackground />
