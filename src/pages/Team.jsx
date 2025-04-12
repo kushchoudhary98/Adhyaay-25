@@ -68,9 +68,9 @@ const logistics = [
 ];
 
 const marketing = [
+  { name: "Uttam Bansal", photo: ub },
   { name: "Saurabh Kumar", photo: sk_market },
   { name: "Vishal Aryan", photo: va },
-  { name: "Uttam Bansal", photo: ub },
 ];
 
 const officialFestCoordinator = [
@@ -92,8 +92,8 @@ const socialMediaPublicity = [
 ];
 
 const stageManagement = [
-  { name: "Harsh pratap singh", photo: hps },
   { name: "Harshit Pandey", photo: hp },
+  { name: "Harsh Pratap Singh", photo: hps },
 ];
 
 const studentSecretary = [
@@ -115,6 +115,8 @@ const domains = [
   { title: "Student Secretary", mem: studentSecretary },
   { title: "Official Fest Coordinator", mem: officialFestCoordinator },
   { title: "Web Development", mem: webDevelopment },
+  { title: "Marketing", mem: marketing },
+  { title: "Stage Management", mem: stageManagement },
   { title: "Informals", mem: informals },
   { title: "Social Media & Publicity", mem: socialMediaPublicity },
   { title: "Content", mem: content },
@@ -122,9 +124,7 @@ const domains = [
   { title: "Creativity", mem: creativity },
   { title: "Logistics", mem: logistics },
   { title: "Design & Social", mem: designSocialHead },
-  { title: "Marketing", mem: marketing },
   { title: "Public Relation", mem: publicRelation },
-  { title: "Stage Management", mem: stageManagement },
 ];
 
 export default function Team() {
