@@ -11,14 +11,16 @@ import Merch from "./Merch";
 import Events from "./Events";
 import Team from "./Team";
 import About from "./About";
+import Sponsors from "./Sponsors";
 import NavItems from "../components/NavItems";
 
 const positions = {
   'home': { x: "-30vw", y: "-10vw" },
   'events': { x: "10vw", y: "-60vw" },
+  // 'sponsors': { x: "10vw", y: "-60vw" },
   'merch': { x: "-30vw", y: "-110vw" },
   'about': { x: "-30vw", y: "-60vw" },
-  'teams': { x: "-70vw", y: "-60vw" },
+  'teams': { x: "-70vw", y: "-60vw" }
 };
 
 
@@ -72,6 +74,7 @@ const Home = () => {
       >
         <Tab setPosition={setPosition} href="home">Home</Tab>
         <Tab setPosition={setPosition} href="events">Events</Tab>
+        {/* <Tab setPosition={setPosition} href="sponsors">Sponsors</Tab> */}
         <Tab setPosition={setPosition} href="teams">Teams</Tab>
         <Tab setPosition={setPosition} href="merch">Merchandise</Tab>
         <Tab setPosition={setPosition} href="about">About</Tab>
@@ -173,6 +176,13 @@ const Home = () => {
           )}
        </AnimatePresence>
 
+        {/* <AnimatePresence>
+          {section === "sponsors" && (
+            <div className="">
+              <Sponsors />
+            </div>
+          )}
+        </AnimatePresence> */}
         <AnimatePresence>
           {section === "events" && (
             <div className="">

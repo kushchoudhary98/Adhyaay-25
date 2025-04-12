@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import '../fonts.css'
 
 export default function About() {
   return (

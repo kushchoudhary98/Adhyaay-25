@@ -10,7 +10,7 @@ export default function Merch() {
       <div className="relative md:w-[80vw] w-[90vw] md:h-[90vh] h-[80vh] translate-y-[5vh] overflow-hidden flex flex-col md:flex-row bg-[#ffffff06] backdrop-blur-3xl rounded-4xl z-30">
         <div className="text-white w-full md:mt-5 flex items-center justify-center md:p-20 p-5">
           <div className="text-3xl font-bold w-fit flex justify-center flex-col p-5 md:p-20 rounded-4xl">
-            <div className="text-[20px] md:text-2xl ">The<br /> <span className="text-6xl md:text-9xl font-extrabold font-marker">Official TShirt</span><br/> of Adhyaay'25</div>
+            <div className="text-[20px] md:text-2xl ">The<br /> <span className=" theglobe text-6xl md:text-[210px]">Official <span className="ml-30">TShirt</span></span></div>
           </div>
         </div>
 

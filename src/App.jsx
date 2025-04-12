@@ -4,8 +4,9 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Events from './pages/Events'
 import Merch from './pages/Merch'
-// import Sponsors from './pages/Sponsors'
+import Sponsors from './pages/Sponsors'
 import Team from './pages/Team'
+import '../src/fonts.css'
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path='events' element={<Events />} />
         <Route path='merch' element={<Merch />} />
-        {/* <Route path='sponsors' element={<Sponsors />} /> */}
+        <Route path='sponsors' element={<Sponsors />} />
         <Route path='teams' element={<Team />} />
       </Routes>
     </BrowserRouter>

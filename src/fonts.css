@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'Equinox';
+  src: url('./assets/fonts/jd_equinox.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CandyInc';
+  src: url('./assets/fonts/Candyinc-9Gl2.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EquinoxBold';
+  src: url('./assets/fonts/Equinox Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EquinoxRegular';
+  src: url('./assets/fonts/Equinox Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'QuicksilverFast';
+  src: url('./assets/fonts/QuicksilverFastRegular-DO3oE.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RichardClean';
+  src: url('./assets/fonts/RichardCleanPersonalUseRegular-MV54p.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Scripto';
+  src: url('./assets/fonts/Scripto-2OR2v.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TheGlobe';
+  src: url('./assets/fonts/TheGlobePersonalUseBold-2ORlw.ttf') format('truetype');
+  font-weight: bolder;
+  /* font-style: normal; */
+}
+
+
+.equinox { font-family: 'Equinox', sans-serif; }
+.equinox-bold { font-family: 'EquinoxBold', sans-serif; }
+.equinox-regular { font-family: 'EquinoxRegular', sans-serif; }
+/* .candy { font-family: 'CandyInc', cursive; } */
+/* .richard { font-family: 'RichardClean', serif; } */
+/* .quicksilver { font-family: 'QuicksilverFast', sans-serif; } */
+.scripto { font-family: 'Scripto', cursive; }
+.theglobe { font-family: 'TheGlobe', serif; }

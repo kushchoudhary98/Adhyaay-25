@@ -14,6 +14,9 @@ import Roadies from "../assets/events/ROADIES - 1.png";
 import Sannskritik from "../assets/events/Sanskritik Ekta (1).png";
 import SFM from "../assets/events/SFM.jpg";
 import Squid from "../assets/events/Squid Game.png";
+import dj from "../assets/events/dj.png";
+import Celebrity from "../assets/events/Celebrity.png";
+import Soty from "../assets/events/soty.jpeg";
 
 export const DragCloseDrawerExample = () => {
   const [open, setOpen] = useState(false);
@@ -121,17 +124,11 @@ const eventsData = [
     link: "#",
     image: Sannskritik,
   },
-  // {
-  //   title: "Sufi Night",
-  //   description: "Description coming soon...",
-  //   link: "#",
-  //   comingSoon: true,
-  // },
   {
-    title: "Student Of The Year",
-    description: "Description coming soon...",
+    title: "Star of Tommorrow",
+    description: "Get ready to showcase your talent, passion, and charisma in this thrilling competition that celebrates creativity and leadership within our college community. This event is designed to test your strategic thinking, teamwork, and artistic abilities through a series of engaging challenges. Whether you excel in problem-solving, collaboration, or performance, this event will challenge and reward you at every step.",
     link: "#",
-    comingSoon: true,
+    image: Soty,
   },
   {
     title: "Short Film Making",
@@ -158,22 +155,16 @@ const eventsData = [
     image: Face,
   },
   {
-    title: "EDM Night",
-    description: "Description coming soon...",
+    title: "DJ Night",
+    description: "The rumors are true. Fellas! Get ready to witness the star power with the amazing EDM Night of the year. From the studio to the stage, it's more than just a gig! Together let's enjoy the magic that unfolds and support the ones who make such nights memorable.",
     link: "#",
-    comingSoon: true,
+    image: dj,
   },
   {
     title: "Melody Nights",
     description: "Join us for an unforgettable evening of music and camaraderie at our Melody Nights event! This is a unique opportunity for students to showcase their singing talents in a friendly and supportive environment. Whether you're a seasoned performer or just starting out, this event is open to all.",
     link: "#",
     image: melody
-  },
-  {
-    title: "Stage Performance",
-    description: "Description coming soon...",
-    link: "#",
-    comingSoon: true,
   },
   {
     title: "Masquerade Party",
@@ -198,9 +189,9 @@ const eventsData = [
   },
   {
     title: "Celebrity Night",
-    description: "Description coming soon...",
+    description: "A Celebrity Night event is a star-studded affair, where a veritable pantheon of luminaries from diverse realms gather to entertain and engage with the audience. The event features dazzling performances, interactive sessions, and opportunities for fans to meet their favorite celebrities. Carefully planned and supported by sponsors, the night aims to etch memorable experiences with a mix of music, dance, jest, culture and fun. Media coverage amplifies its reach, making it a night to remember for everyone involved.",
     link: "#",
-    comingSoon: true,
+    image: Celebrity,
   },
 
 ];
