@@ -14,14 +14,15 @@ import About from "./About";
 import campa from '../assets/campa.png';
 import NavItems from "../components/NavItems";
 import '../fonts.css'
+import Sponsors from "./Sponsors";
 
 const positions = {
-  'home': { x: "-30vw", y: "-10vw" },
-  'events': { x: "10vw", y: "-60vw" },
-  // 'sponsors': { x: "10vw", y: "-60vw" },
-  'merch': { x: "-30vw", y: "-110vw" },
-  'about': { x: "-30vw", y: "-60vw" },
-  'teams': { x: "-70vw", y: "-60vw" }
+  'home': { x: "-30vw", y: "-10vw", scale: 1 },
+  'events': { x: "10vw", y: "-60vw", scale: 1  },
+  'sponsors': { x: "10vw", y: "0vw", scale: 0.5 },
+  'merch': { x: "-30vw", y: "-110vw", scale: 1  },
+  'about': { x: "-30vw", y: "-60vw", scale: 1  },
+  'teams': { x: "-70vw", y: "-60vw", scale: 1  }
 };
 
 
@@ -33,7 +34,7 @@ const Home = () => {
   const [showNav, setShowNav] = useState(true);
   const [showMobNav, setShowMobNav] = useState(false);
 
-  const [cameraPosition, setCameraPosition] = useState(window.innerWidth<765?{ x: "-84vh", y: "10vh" }:{ x: "-30vw", y: "0vw" });
+  const [cameraPosition, setCameraPosition] = useState(window.innerWidth<765?{ x: "-84vh", y: "10vh", scale: 1 }:{ x: "-30vw", y: "0vw", scale: 1 });
 
   const Navbar = () => {
     return (
@@ -75,7 +76,7 @@ const Home = () => {
       >
         <Tab setPosition={setPosition} href="home">Home</Tab>
         <Tab setPosition={setPosition} href="events">Events</Tab>
-        {/* <Tab setPosition={setPosition} href="sponsors">Sponsors</Tab> */}
+        <Tab setPosition={setPosition} href="sponsors">Sponsors</Tab>
         <Tab setPosition={setPosition} href="teams">Teams</Tab>
         <Tab setPosition={setPosition} href="merch">Merchandise</Tab>
         <Tab setPosition={setPosition} href="about">About</Tab>
@@ -181,13 +182,13 @@ const Home = () => {
           )}
        </AnimatePresence>
 
-        {/* <AnimatePresence>
+        <AnimatePresence>
           {section === "sponsors" && (
             <div className="">
               <Sponsors />
             </div>
           )}
-        </AnimatePresence> */}
+        </AnimatePresence>
         <AnimatePresence>
           {section === "events" && (
             <div className="">
@@ -216,6 +217,7 @@ const Home = () => {
           animate={{
             x: cameraPosition.x,
             y: cameraPosition.y,
+            scale: cameraPosition.scale
           }}
           transition={{
             duration: 1,

@@ -273,24 +273,24 @@ export default function Team() {
                     {data.mem.map((data, index) => (
                       <SwiperSlide key={index} virtualIndex={index} className=''>
                         <motion.div
-                          initial={{ opacity: 0, scale: 0.9 }}
+                          initial={{ opacity: 0, scale: 0.5 }}
                           whileInView={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 0.8 }}
                           className='h-[40vh] rounded-2xl relative'>
-                          {data.name}
-                        </motion.div>
-                        <img
-                          src={data.photo}
-                          alt={data.name}
-                          className='absolute inset-0 w-[80%] left-1/2 -translate-x-1/2 h-full object-cover rounded-2xl'
-                        />
 
-                        {/* Name overlay on hover with background */}
-                        <div className='absolute top-[86%] w-[80%] h-[15%] left-1/2 -translate-x-1/2 inset-0 flex items-center justify-center opacity-100 backdrop-blur-md transition-opacity duration-300 rounded-2xl'>
-                          <div className='bg-black/50 px-4 py-2 rounded-md'>
-                            <p className='text-white text-xl font-semibold text-center'>{data.name}</p>
+                          <img
+                            src={data.photo}
+                            alt={data.name}
+                            className='absolute inset-0 w-[80%] left-1/2 -translate-x-1/2 h-full object-cover rounded-2xl'
+                          />
+
+                          {/* Name overlay on hover with background */}
+                          <div className='absolute top-[86%] w-[80%] h-[15%] left-1/2 -translate-x-1/2 inset-0 flex items-center justify-center opacity-100 backdrop-blur-md transition-opacity duration-300 rounded-2xl'>
+                            <div className='bg-black/50 px-4 py-2 rounded-md'>
+                              <p className='text-white text-xl font-semibold text-center'>{data.name}</p>
+                            </div>
                           </div>
-                        </div>
+                        </motion.div>
                       </SwiperSlide>
                     ))}
                   </Swiper>

@@ -288,7 +288,7 @@ const Events = () => {
 
       {/* Mobile Layout */}
       <div className="w-full h-[100dvh] relative md:hidden flex justify-center items-center">
-        <div className="w-[90vw] h-[80vh] text-white bg-[#ffffff06] translate-y-[5vh] backdrop-blur-3xl rounded-4xl z-30 relative overflow-y-scroll p-5 space-y-6">
+        <div className="w-[90vw] h-[80vh] text-white bg-[#ffffff06] translate-y-[5vh] backdrop-blur-3xl rounded-4xl z-30 relative overflow-y-scroll pt-5 space-y-6">
           {eventsData.map((data, index) => (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -296,10 +296,10 @@ const Events = () => {
               key={index}
               className="space-y-2"
             >
-              <h2 className="text-2xl font-semibold">{data.title}</h2>
+              <h2 className="text-3xl font-medium ml-4">{data.title}</h2>
               <div
                 onClick={() => handleOpenDrawer(data)}
-                className="w-full h-[40vh] rounded-2xl overflow-hidden bg-neutral-800 flex justify-center items-center cursor-pointer"
+                className="w-full h-fit overflow-hidden bg-neutral-800 flex justify-center items-center cursor-pointer"
               >
                 {data.image ? (
                   <img
