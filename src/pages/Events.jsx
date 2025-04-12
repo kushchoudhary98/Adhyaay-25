@@ -12,11 +12,13 @@ import Masquerade from "../assets/events/Masquerade Party.png";
 import melody from "../assets/events/melody war (1).png";
 import Roadies from "../assets/events/ROADIES - 1.png";
 import Sannskritik from "../assets/events/Sanskritik Ekta (1).png";
-import SFM from "../assets/events/SFM.jpg";
+import SFM from "../assets/events/SFM.png";
 import Squid from "../assets/events/Squid Game.png";
 import dj from "../assets/events/dj.png";
 import Celebrity from "../assets/events/Celebrity.png";
-import Soty from "../assets/events/soty.jpeg";
+import Soty from "../assets/events/soty.png";
+import BollyDay from '../assets/events/bd.jpeg'
+import GS from '../assets/events/gs.jpeg'
 
 export const DragCloseDrawerExample = () => {
   const [open, setOpen] = useState(false);
@@ -140,13 +142,13 @@ const eventsData = [
     title: "Bollywood Day",
     description: "We cordially invite you to participate in a vibrant celebration of Bollywood cinema, featuring a captivating fashion show that showcases the iconic styles and personalities of Indian film. Participants are encouraged to select a beloved Bollywood actor or actress and recreate their signature look, capturing their unique essence through attire, hairstyle, and makeup.",
     link: "#",
-    comingSoon: true,
+    image: BollyDay
   },
   {
     title: "Glamour Strut",
     description: "Glamour Strut is a fashion-centric event where participants showcase their style, elegance, and personality on the ramp. Participants can choose to walk individually, in pairs, or present captivating stage performances. Glamour Strut is a platform for students to showcase their unique style, confidence, and creativity through individual and paired ramp walks, as well as stage performances.",
     link: "#",
-    comingSoon: true,
+    image: GS
   },
   {
     title: "Face Painting",
@@ -201,7 +203,7 @@ const Events = () => {
   const [eventTitle, setEventTitle] = useState("Title");
   const [eventDesc, setEventDesc] = useState("lorem ipsum dolor sit amet.");
   const [eventImage, setEventImage] = useState(null);
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(0);
 
   const handleOpenDrawer = (event) => {
     setEventTitle(event.title);
@@ -268,7 +270,7 @@ const Events = () => {
                   whileHover={{ scale: 1.05, transition: { duration: 0.15 } }}
                   onClick={() => handleOpenDrawer(data)}
                   onMouseEnter={() => setHoveredIndex(index)}
-                  onMouseLeave={() => setHoveredIndex(null)}
+                  //onMouseLeave={() => setHoveredIndex(null)}
                   variants={{
                     hidden: { opacity: 0, scale: 0.8 },
                     visible: { opacity: 1, scale: 1 },
@@ -319,17 +321,6 @@ const Events = () => {
         <div className="mx-auto max-w-2xl space-y-4 text-neutral-400 pb-16">
           <h2 className="text-3xl font-bold text-neutral-200">{eventTitle}</h2>
           <p>{eventDesc}</p>
-          {eventImage ? (
-            <img
-              src={eventImage}
-              alt={eventTitle}
-              className="w-full rounded-xl mt-4 object-cover"
-            />
-          ) : (
-            <div className="w-full h-[250px] rounded-xl mt-4 bg-neutral-800 text-white flex items-center justify-center text-2xl font-bold">
-              Coming Soon
-            </div>
-          )}
         </div>
       </DragCloseDrawer>
     </>

@@ -11,7 +11,7 @@ import Merch from "./Merch";
 import Events from "./Events";
 import Team from "./Team";
 import About from "./About";
-import Sponsors from "./Sponsors";
+import campa from '../assets/campa.png';
 import NavItems from "../components/NavItems";
 
 const positions = {
@@ -162,7 +162,11 @@ const Home = () => {
                 delay: 0,
               }}
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-full h-[100dvh]">
-              <img src={adLogo} alt="adhyaay" className="md:w-[900px] w-full md:scale-100 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 md:-translate-y-[140%] -translate-y-[130%]">
+                <img src={campa} alt="adhyaay" className="md:w-[200px] w-[150px] md:scale-100 " />
+                <p className="text-white w-full text-center md:text-lg font-bold">PRESENTS</p>
+              </div>
+              <img src={adLogo} alt="adhyaay" className="md:w-[900px] w-full md:scale-100 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[30%]" />
               <div className="text-zinc-400 fixed bottom-10 left-1/2 -translate-x-1/2 font-semibold">Tap Menu to Explore</div>
             </motion.div>
           )}
