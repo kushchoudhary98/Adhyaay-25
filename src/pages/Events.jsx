@@ -288,7 +288,7 @@ const Events = () => {
 
       {/* Mobile Layout */}
       <div className="w-full h-[100dvh] relative md:hidden flex justify-center items-center">
-        <div className="w-[90vw] h-[80vh] text-white bg-[#ffffff06] translate-y-[5vh] backdrop-blur-3xl rounded-4xl z-30 relative overflow-y-scroll pt-5 space-y-6">
+        <div className="w-[90vw] h-[80vh] text-white bg-[#ffffff06] translate-y-[5vh] backdrop-blur-3xl rounded-4xl z-30 relative overflow-y-scroll pt-10 space-y-6">
           {eventsData.map((data, index) => (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
